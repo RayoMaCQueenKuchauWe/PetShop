@@ -25,6 +25,7 @@ public class Registrar extends AppCompatActivity {
         pas2=findViewById(R.id.RegPass2);
         nom=findViewById(R.id.RegNombre);
 
+
         ap=findViewById(R.id.RegApellido);
         co=findViewById(R.id.RegCorreo);
         reg=findViewById(R.id.btnRegRegistrar);
