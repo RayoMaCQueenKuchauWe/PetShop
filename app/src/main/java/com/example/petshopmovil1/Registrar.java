@@ -20,12 +20,11 @@ public class Registrar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
 
+        //Hola Mundo xD
         us=findViewById(R.id.RegUser);
         pas=findViewById(R.id.RegPass);
         pas2=findViewById(R.id.RegPass2);
         nom=findViewById(R.id.RegNombre);
-
-
         ap=findViewById(R.id.RegApellido);
         co=findViewById(R.id.RegCorreo);
         reg=findViewById(R.id.btnRegRegistrar);
