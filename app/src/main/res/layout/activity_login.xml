@@ -7,7 +7,8 @@
     android:layout_margin="6dp"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <ImageView
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
         android:layout_margin="20dp"
         android:layout_weight="1"
         android:fontFamily="serif"
-        android:hint="Usuario"
+        android:hint="@string/txtUsuario"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -32,7 +33,7 @@
         android:layout_margin="20dp"
         android:layout_weight="1"
         android:fontFamily="serif"
-        android:hint="Password"
+        android:hint="@string/txtPassword"
         android:inputType="textPassword" />
 
     <Button
@@ -43,10 +44,10 @@
         android:layout_weight="1"
         android:background="#EC8848"
         android:fontFamily="serif"
-        android:text="Entrar"
+        android:text="@string/btnIncio"
         android:textColor="#E9D95C"
-        android:textSize="30dp" />
-    android:textStyle="bold"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/btnRegistrar"
@@ -56,8 +57,8 @@
         android:layout_weight="1"
         android:background="#0088FF"
         android:fontFamily="serif"
-        android:text="REGISTRAR"
+        android:text="@string/btnRegistrar"
         android:textColor="#ffffff"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 </LinearLayout>

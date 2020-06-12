@@ -16,7 +16,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="USUARIOS REGISTRADOS"
+        android:text="@string/lblURegistrados"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -29,8 +29,7 @@
         <ListView
             android:id="@+id/lista"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.15"
+            android:layout_height="wrap_content"
             android:background="@color/colorLightPrimary" />
     </LinearLayout>
 

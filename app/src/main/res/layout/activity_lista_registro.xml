@@ -15,7 +15,7 @@
         android:layout_height="60dp"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="Lista de mascotas"
+        android:text="@string/lblRegistroM"
         android:textSize="24sp"
         app:autoSizeTextType="uniform" />
 
@@ -42,8 +42,7 @@
             android:layout_marginBottom="0dp"
             android:background="@color/colorPrimary"
             android:fontFamily="serif"
-            android:onClick="Atras"
-            android:text="Salir"
+            android:text="@string/btnSalirM"
             android:textSize="18sp" />
     </LinearLayout>
 
