@@ -12,7 +12,8 @@ import android.widget.Toast;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.makeText;
 
-public class Login extends AppCompatActivity {
+public class
+Login extends AppCompatActivity {
 
     EditText user,pass;
     Button btnEntrar, btnRegistrar;
