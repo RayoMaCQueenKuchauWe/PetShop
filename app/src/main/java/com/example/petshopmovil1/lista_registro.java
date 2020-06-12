@@ -23,15 +23,15 @@ public class lista_registro extends AppCompatActivity {
 
         btnRegresar=findViewById(R.id.btnSalir);
         PetsDTO dto=new PetsDTO();
-        ListView list=(ListView)findViewById(R.id.lista);
+        ListView list= findViewById(R.id.lista);
         Modelo mod=new Modelo(this);
         ArrayList<PetsDTO> listR=mod.selectPets();
 
-        ArrayList<String> lst=new ArrayList<String>();
+        ArrayList<String> lst= new ArrayList<>();
         for(PetsDTO petsDTO:listR){
-            lst.add("Tipo: "+petsDTO.getTipo()+" Raza: "+petsDTO.getRaza()+" Género: "+petsDTO.getGenero()+" Edad: "+petsDTO.getEdad());
+            lst.add("Nombre: "+petsDTO.getNombre()+" Mascota: "+petsDTO.getTipo()+" Raza: "+petsDTO.getRaza()+" Género: "+petsDTO.getGenero()+" Edad: "+petsDTO.getEdad());
         }
-        ArrayAdapter<String> s=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,lst);
+        ArrayAdapter<String> s= new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, lst);
         list.setAdapter(s);
 
         btnRegresar.setOnClickListener(new View.OnClickListener() {

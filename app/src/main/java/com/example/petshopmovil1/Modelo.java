@@ -6,30 +6,30 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-public class Modelo {
-    Context c;
-    SQLiteDatabase db;
+class Modelo {
+    private Context c;
+    private SQLiteDatabase db;
     ArrayList<PetsDTO> list;
-    PetsDTO pets;
-    String bd="dbpets";
+    private PetsDTO pets;
+    private String bd="dbpets";
 
-    public Modelo(Context c){
+    Modelo(Context c){
         this.c=c;
-        db=c.openOrCreateDatabase(bd,c.MODE_PRIVATE,null);
+        db=c.openOrCreateDatabase(bd, Context.MODE_PRIVATE,null);
         pets=new PetsDTO();
     }
 
-    public Modelo(){}
+    Modelo(){}
 
-    public SQLiteDatabase getConn(Context context){
+    private SQLiteDatabase getConn(Context context){
         PetsBD petsBD=new PetsBD(context, "dbpets",null,1);
         SQLiteDatabase db=petsBD.getWritableDatabase();
         return db;
     }
 
     int insetPet(Context context,PetsDTO dto){
-        int res=0;
-        String sql="INSERT INTO mascotas(tipo,raza,edad,genero) VALUES('"+dto.getTipo()+"','"+dto.getRaza()+"','"+dto.getEdad()+"','"+dto.getGenero()+"')";
+        int res;
+        String sql="INSERT INTO mascotas VALUES(NULL,'"+dto.getNombre()+"','"+dto.getTipo()+"','"+dto.getRaza()+"','"+dto.getEdad()+"','"+dto.getGenero()+"','"+dto.getFoto()+"')";
         SQLiteDatabase db=this.getConn(context);
         try{
             db.execSQL(sql);
@@ -40,17 +40,18 @@ public class Modelo {
         return res;
     }
 
-    public ArrayList<PetsDTO> selectPets(){
-        ArrayList<PetsDTO> list=new ArrayList<PetsDTO>();
+    ArrayList<PetsDTO> selectPets(){
+        ArrayList<PetsDTO> list= new ArrayList<>();
         list.clear();
         Cursor cr=db.rawQuery("SELECT * FROM mascotas",null);
         if(cr!=null && cr.moveToFirst()){
             do{
                 PetsDTO pets=new PetsDTO();
-                pets.setTipo(cr.getString(1));
-                pets.setRaza(cr.getString(2));
-                pets.setGenero(cr.getString(4));
-                pets.setEdad(cr.getInt(3));
+                pets.setNombre(cr.getString(1));
+                pets.setTipo(cr.getString(2));
+                pets.setRaza(cr.getString(3));
+                pets.setGenero(cr.getString(5));
+                pets.setEdad(cr.getInt(4));
                 list.add(pets);
             }while(cr.moveToNext());
         }

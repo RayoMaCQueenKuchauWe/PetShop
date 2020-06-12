@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">PET SHOP</string>
     <string name="tvmenu">MENU PRINCIPAL</string>
+
+    <!-- Activity_main2-->
+    <string name="lblRegistroM">Registro de Mascotas</string>
+    <string name="lblTipo">Mascota:</string>
+    <string name="lblGenero">Género:</string>
+    <string name="lblNombre">Nombre:</string>
+    <string name="lblRaza">Raza:</string>
+    <string name="lblEdad">Edad:</string>
+
+    <string name="txtNombre">Nombre</string>
+    <string name="txtRaza">Raza</string>
+    <string name="txtEdad">Edad</string>
+
+    <string name="radioM">Macho</string>
+    <string name="radioH">Hembra</string>
+
+    <string name="btnAgregar">Agregar</string>
+    <string name="btnRegistro">Registros</string>
+    <string name="btnFoto">Agregar foto</string>
+    <!--Errores-->
+    <string name="error_campoObligatorio">Campo Obligatorio</string>
+    <string name="error_campoNumerico">Campo numérico</string>
+    <string name="error_valorEntre0y100">Valor entre 0 y 100</string>
 </resources>
