@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="TipoMascota">
-        <item>Mamifero</item>
-        <item>Carnivoro</item>
-        <item>Herbivoro</item>
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Ave</item>
     </string-array>
 </resources>
