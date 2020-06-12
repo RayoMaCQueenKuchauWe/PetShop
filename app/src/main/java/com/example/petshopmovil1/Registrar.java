@@ -35,28 +35,36 @@ public class Registrar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Usuario u = new Usuario();
-                    u.setUsuario(us.getText().toString());
-                    u.setPassword(pas.getText().toString());
-                    u.setPassword2(pas2.getText().toString());
-                    u.setNombre(nom.getText().toString());
-                    u.setApellidos(ap.getText().toString());
-                    u.setCorreo(co.toString());
-                    if(!u.isNull()){
+                    if(us.getText().toString().isEmpty() || pas.getText().toString().isEmpty() || pas2.getText().toString().isEmpty() || nom.getText().toString().isEmpty() || ap.getText().toString().isEmpty() || co.getText().toString().isEmpty())
+                    {
                         Toast.makeText(Registrar.this,"ERROR: Campos vacios",Toast.LENGTH_LONG).show();
                     }
                     else
                     {
-                        if(dao.insertUsuario(u)){
-                            Toast.makeText(Registrar.this,"Registro Exitoso!",Toast.LENGTH_LONG).show();
-                            Intent ent = new Intent (Registrar.this, Login.class);
-                            startActivity(ent);
+                        Usuario u = new Usuario();
+                        u.setUsuario(us.getText().toString());
+                        u.setPassword(pas.getText().toString());
+                        u.setPassword2(pas2.getText().toString());
+                        u.setNombre(nom.getText().toString());
+                        u.setApellidos(ap.getText().toString());
+                        u.setCorreo(co.toString());
+                        if(!u.isNull()){
+                            Toast.makeText(Registrar.this,"ERROR: Campos vacios",Toast.LENGTH_LONG).show();
                         }
                         else
                         {
-                            Toast.makeText(Registrar.this,"Usuario ya registrado",Toast.LENGTH_LONG).show();
+                            if(dao.insertUsuario(u)){
+                                Toast.makeText(Registrar.this,"Registro Exitoso!",Toast.LENGTH_LONG).show();
+                                Intent ent = new Intent (Registrar.this, Login.class);
+                                startActivity(ent);
+                            }
+                            else
+                            {
+                                Toast.makeText(Registrar.this,"Usuario ya registrado",Toast.LENGTH_LONG).show();
+                            }
                         }
                     }
+
                 } catch (Exception ex){
                     Toast.makeText(Registrar.this,ex.getMessage(),Toast.LENGTH_LONG).show();
                 }

@@ -19,6 +19,35 @@
         android:gravity="center"
         android:text="CREAR NUEVA CUENTA"
         android:textSize="24sp" />
+    <EditText
+        android:id="@+id/RegNombre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="serif"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/RegApellido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="serif"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/RegCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="serif"
+        android:hint="Correo"
+        android:inputType="textPersonName"
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/RegUser"
@@ -50,35 +79,7 @@
         android:inputType="textPassword"
         android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/RegNombre"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/RegApellido"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Apellidos"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/RegCorreo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Correo"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
 
     <Button
         android:id="@+id/btnRegRegistrar"
