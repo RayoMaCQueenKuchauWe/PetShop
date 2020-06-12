@@ -1,117 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginBottom="5dp"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
+        android:src="@drawable/portadcuenta"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#d8000000"
         android:gravity="center"
-        android:text="CREAR NUEVA CUENTA"
-        android:textSize="24sp" />
-    <EditText
-        android:id="@+id/RegNombre"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/RegApellido"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Apellidos"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="@string/lblCuenta"
+            android:textSize="34sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ccc"/>
 
-    <EditText
-        android:id="@+id/RegCorreo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Correo"
-        android:inputType="textPersonName"
-        android:textSize="12sp" />
+        <EditText
+            android:id="@+id/RegNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/txtRNombre"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:textColor="#fff"/>
 
-    <EditText
-        android:id="@+id/RegUser"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Usuario"
-        android:inputType="textEmailAddress"
-        android:textSize="12sp" />
+        <EditText
+            android:id="@+id/RegApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/txtRApellido"
+            android:inputType="textPersonName"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:textColor="#fff"/>
 
-    <EditText
-        android:id="@+id/RegPass"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textSize="12sp" />
+        <EditText
+            android:id="@+id/RegCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/txtCorreo"
+            android:inputType="textEmailAddress"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:textColor="#fff"/>
 
-    <EditText
-        android:id="@+id/RegPass2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="Ingrese nuevamente Password"
-        android:inputType="textPassword"
-        android:textSize="12sp" />
+        <EditText
+            android:id="@+id/RegUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/txtRUsuario"
+            android:inputType="textEmailAddress"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:textColor="#fff"/>
+
+        <EditText
+            android:id="@+id/RegPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/txtRpass"
+            android:inputType="textPassword"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:textColor="#fff"/>
+
+        <EditText
+            android:id="@+id/RegPass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/txtRePass"
+            android:inputType="textPassword"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#ccc"
+            android:textColor="#fff"/>
 
 
 
-    <Button
-        android:id="@+id/btnRegRegistrar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="5dp"
-        android:layout_weight="1"
-        android:background="#EC8848"
-        android:fontFamily="serif"
-        android:text="REGISTRAR"
-        android:textColor="#E9D95C"
-        android:textSize="18sp" />
-    android:textStyle="bold"
+        <Button
+            android:id="@+id/btnRegRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_redondeado_white"
+            android:textSize="16sp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="serif"
+            android:text="@string/btnAddRegistro"
+            android:textStyle="bold"
+            android:textColor="#403f3f"/>
 
-    <Button
-        android:id="@+id/btnRegCancelar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="5dp"
-        android:layout_weight="1"
-        android:background="#0088FF"
-        android:fontFamily="serif"
-        android:text="CANCELAR"
-        android:textColor="#ffffff"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-
-</LinearLayout>
+        <Button
+            android:id="@+id/btnRegCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_redondeado_registrar"
+            android:textSize="16sp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="serif"
+            android:text="@string/btnCancel"
+            android:textColor="#403f3f"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>

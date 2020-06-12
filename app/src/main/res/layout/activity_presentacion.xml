@@ -1,39 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="6dp"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="414dp"
-            android:layout_weight="1"
-            android:src="@drawable/tituloquienes" />
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="643dp"
-            android:layout_weight="1"
-            android:src="@drawable/quienes" />
+            android:layout_height="match_parent"
+            android:src="@drawable/portadcuenta"
+            android:scaleType="centerCrop"/>
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="971dp"
-            android:layout_weight="1"
-            android:src="@drawable/contacto" />
+            android:orientation="vertical"
+            android:background="#d8000000"
+            android:gravity="center"
+            android:layout_height="match_parent">
 
-        <VideoView
-            android:id="@+id/video_view"
-            android:layout_width="1070dp"
-            android:layout_height="166dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/lblQuienes"
+                android:textSize="34sp"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#ccc" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/lblPresentacion"
+                android:textSize="20sp"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:textColor="#ccc" />
+
+
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="start">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:src="@drawable/maps" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:src="@drawable/phone" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:src="@drawable/mail" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="start"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="serif"
+                        android:text="@string/lblDireccion"
+                        android:textSize="15sp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#ccc" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="serif"
+                        android:text="@string/lblNumero"
+                        android:textSize="15sp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#ccc" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:fontFamily="serif"
+                        android:text="@string/lblEmail"
+                        android:textSize="15sp"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#ccc" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
     </FrameLayout>
 
-</LinearLayout>
+</RelativeLayout>

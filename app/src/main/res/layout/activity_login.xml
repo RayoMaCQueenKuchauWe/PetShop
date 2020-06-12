@@ -1,64 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="6dp"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@drawable/login" />
-
-    <EditText
-        android:id="@+id/User"
+        android:src="@drawable/portad"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="@string/txtUsuario"
-        android:inputType="textEmailAddress" />
+        android:orientation="vertical"
+        android:background="#d8000000"
+        android:gravity="center"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/Pass"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:fontFamily="serif"
-        android:hint="@string/txtPassword"
-        android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/btnEntrar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:background="#EC8848"
-        android:fontFamily="serif"
-        android:text="@string/btnIncio"
-        android:textColor="#E9D95C"
-        android:textSize="30sp"
-        android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="70dp"
+            android:padding="10dp"
+            android:src="@drawable/login"
+            android:scaleType="centerCrop"/>
 
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:background="#0088FF"
-        android:fontFamily="serif"
-        android:text="@string/btnRegistrar"
-        android:textColor="#ffffff"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/User"
+            android:hint="@string/txtUsuario"
+            android:inputType="textPersonName"
+            android:fontFamily="serif"
+            android:background="@drawable/input"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#ccc"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Pass"
+            android:hint="@string/txtPassword"
+            android:fontFamily="serif"
+            android:inputType="textPassword"
+            android:background="@drawable/input"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#ccc"/>
+
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_redondeado_white"
+            android:text="@string/btnIncio"
+            android:textColor="#403f3f"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="serif"/>
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_redondeado_registrar"
+            android:fontFamily="serif"
+            android:text="@string/btnRegistrar"
+            android:textColor="#403f3f"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"/>
+    </LinearLayout>
+</RelativeLayout>
