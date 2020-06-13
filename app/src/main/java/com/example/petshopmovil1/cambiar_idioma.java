@@ -8,6 +8,7 @@ public class cambiar_idioma extends AppCompatActivity {
 
     Button btnEspañol;
     Button btnIngles;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
