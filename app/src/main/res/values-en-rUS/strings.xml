@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PET SHOP</string>
-    <string name="tvmenu">Main menu</string>
-    <string name="btnQuienes">About us?</string>
     <string name="btnMenú">Change language</string>
     <string name="btnListar">List users</string>
-    <string name="btnMascotas">Pets</string>
+    <string name="btnMascotas">Register pet</string>
     <string name="lblRegistroM">Pet registry</string>
     <string name="lblTipo">Pet:</string>
     <string name="lblGenero">Gender:</string>
     <string name="lblNombre">Name:</string>
-    <string name="lblEdad">Age:</string>
+    <string name="lblEdad">Age(month):</string>
     <string name="lblRaza">Race:</string>
     <string name="txtNombre">Name</string>
     <string name="txtRaza">Race</string>
@@ -20,6 +18,9 @@
     <string name="btnAgregar">Add</string>
     <string name="btnRegistro">Records</string>
     <string name="btnFoto">Add photo</string>
+    <string name="spinnerP">Dog</string>
+    <string name="spinnerG">Cat</string>
+    <string name="spinnerA">Bird</string>
     <string name="error_campoObligatorio">Obligatory field</string>
     <string name="error_campoNumerico">Numeric field</string>
     <string name="error_valorEntre0y100">Value between 0 and 100</string>
@@ -27,6 +28,7 @@
     <string name="error_falloRegistrar">Failed to register</string>
     <string name="error_UsuarioYaRegistrado">Registered user</string>
     <string name="error_contraseñaCorta">Very short password</string>
+    <string name="error_contraseñaCoincide">Passwords do not match</string>
     <string name="win_registro_exitoso">Successful registration</string>
     <string name="txtUsuario">User</string>
     <string name="txtPassword">Password</string>
@@ -53,4 +55,6 @@
     <string name="btnEspañol">Spanish</string>
     <string name="btnIngles">English</string>
     <string name="seleccioneApp">Select application</string>
+    <string name="tvmenu">Main menu</string>
+    <string name="btnQuienes">Who us?</string>
 </resources>

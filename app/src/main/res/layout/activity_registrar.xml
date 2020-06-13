@@ -21,8 +21,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:fontFamily="serif"
             android:gravity="center"
             android:text="@string/lblCuenta"
@@ -30,7 +29,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="30dp"
             android:textColor="#ccc"/>
         <ScrollView
             android:layout_width="match_parent"
@@ -104,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="serif"
                     android:hint="@string/txtRUsuario"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPersonName"
                     android:textSize="12sp"
                     android:layout_marginBottom="15dp"
                     android:layout_marginLeft="20dp"

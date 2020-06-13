@@ -34,36 +34,34 @@ public class Registrar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    if(us.getText().toString().isEmpty() || pas.getText().toString().isEmpty() || pas2.getText().toString().isEmpty() || nom.getText().toString().isEmpty() || ap.getText().toString().isEmpty() || co.getText().toString().isEmpty())
-                    {
-                        Toast.makeText(Registrar.this,getString(R.string.error_camposV),Toast.LENGTH_LONG).show();
-                    }
-                    else
-                    {
-                        Usuario u = new Usuario();
-                        u.setUsuario(us.getText().toString());
-                        u.setPassword(pas.getText().toString());
-                        u.setPassword2(pas2.getText().toString());
-                        u.setNombre(nom.getText().toString());
-                        u.setApellidos(ap.getText().toString());
-                        u.setCorreo(co.toString());
-                        if(!u.isNull()){
-                            Toast.makeText(Registrar.this,getString(R.string.error_camposV),Toast.LENGTH_LONG).show();
-                        }
-                        else
-                        {
-                            if(dao.insertUsuario(u)){
-                                Toast.makeText(Registrar.this,getString(R.string.win_registro_exitoso),Toast.LENGTH_LONG).show();
-                                Intent ent = new Intent (Registrar.this, Login.class);
-                                startActivity(ent);
-                            }
-                            else
-                            {
-                                Toast.makeText(Registrar.this,getString(R.string.error_UsuarioYaRegistrado),Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    }
+                    if (us.getText().toString().isEmpty() || pas.getText().toString().isEmpty() || pas2.getText().toString().isEmpty() || nom.getText().toString().isEmpty() || ap.getText().toString().isEmpty() || co.getText().toString().isEmpty()) {
+                        Toast.makeText(Registrar.this, getString(R.string.error_camposV), Toast.LENGTH_LONG).show();
+                    } else {
+                        if (pas.length() < 6) {
+                            Toast.makeText(Registrar.this, getString(R.string.error_contraseñaCorta), Toast.LENGTH_LONG).show();
+                        } else {
+                            if (pas.getText().toString().equals(pas2.getText().toString())) {
 
+                                Usuario u = new Usuario();
+                                u.setUsuario(us.getText().toString());
+                                u.setPassword(pas.getText().toString());
+                                u.setPassword2(pas2.getText().toString());
+                                u.setNombre(nom.getText().toString());
+                                u.setApellidos(ap.getText().toString());
+                                u.setCorreo(co.toString());
+
+                                if (dao.insertUsuario(u)) {
+                                    Toast.makeText(Registrar.this, getString(R.string.win_registro_exitoso), Toast.LENGTH_LONG).show();
+                                    Intent ent = new Intent(Registrar.this, Login.class);
+                                    startActivity(ent);
+                                } else {
+                                    Toast.makeText(Registrar.this, getString(R.string.error_UsuarioYaRegistrado), Toast.LENGTH_LONG).show();
+                                }
+                            } else {
+                                Toast.makeText(Registrar.this, getString(R.string.error_contraseñaCoincide), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    }
                 } catch (Exception ex){
                     Toast.makeText(Registrar.this,ex.getMessage(),Toast.LENGTH_LONG).show();
                 }
@@ -78,5 +76,13 @@ public class Registrar extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent=new Intent(this,Login.class);
+        startActivity(intent);
+        finish();
     }
 }

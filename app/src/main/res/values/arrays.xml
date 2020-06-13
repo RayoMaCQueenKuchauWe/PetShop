@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="TipoMascota">
-        <item>Perro</item>
-        <item>Gato</item>
-        <item>Ave</item>
-    </string-array>
+    <string-array name="TipoMascota"/>
 </resources>

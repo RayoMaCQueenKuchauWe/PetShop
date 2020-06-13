@@ -16,6 +16,15 @@ public class lista_registro extends AppCompatActivity {
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent=new Intent(this,Main2Activity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_registro);
@@ -27,9 +36,11 @@ public class lista_registro extends AppCompatActivity {
 
         ArrayList<String> lst= new ArrayList<>();
         for(PetsDTO petsDTO:listR){
-            lst.add("Nombre: "+petsDTO.getNombre()+" Mascota: "+petsDTO.getTipo()+" Raza: \r\n"+petsDTO.getRaza()+"Género: "+petsDTO.getGenero()+" Edad(meses): "+petsDTO.getEdad());
+            lst.add(getString(R.string.lblNombre)+" "+petsDTO.getNombre()+" "+getString(R.string.lblTipo)+" "+petsDTO.getTipo()+" "+getString(R.string.lblRaza)+" "+petsDTO.getRaza()+" "+getString(R.string.lblGenero)+" "+petsDTO.getGenero()+" "+getString(R.string.lblEdad)+" "+petsDTO.getEdad());
         }
         ArrayAdapter<String> s= new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, lst);
         list.setAdapter(s);
+
+
     }
 }

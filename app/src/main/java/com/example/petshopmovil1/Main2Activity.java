@@ -46,8 +46,10 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_main2);
 
         tipo = findViewById(R.id.edtTipo);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(Main2Activity.this, R.array.TipoMascota, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        String[] valores={getString(R.string.spinnerP),getString(R.string.spinnerG),getString(R.string.spinnerA)};
+
+        ArrayAdapter<String> adapter=new ArrayAdapter<>(this,R.layout.spinner_modify,valores);
+        adapter.setDropDownViewResource(R.layout.spinner_modify);
         tipo.setAdapter(adapter);
         tipo.setOnItemSelectedListener(this);
 
@@ -155,6 +157,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     public void Siguiente(View v){
         Intent intent=new Intent(this,lista_registro.class);
         startActivity(intent);
+        finish();
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -165,5 +168,13 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
             imageView.setImageURI(path);
             dto.setFoto(path.toString());
         }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent pres = new Intent(MainActivity.this, Presentacion.class);
                 startActivity(pres);
+                finish();
             }
         });
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent resg = new Intent(MainActivity.this, Mostrar.class);
                 startActivity(resg);
+                finish();
             }
         });
 
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent most= new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(most);
+                finish();
             }
         });
 
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent most= new Intent(MainActivity.this, cambiar_idioma.class);
                 startActivity(most);
+                finish();
             }
         });
     }

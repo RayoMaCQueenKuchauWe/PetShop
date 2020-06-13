@@ -15,7 +15,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#d800000"
         android:gravity="center"
         android:layout_height="match_parent">
 
@@ -37,7 +36,6 @@
                 android:id="@+id/lista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#d800000"
                 android:cacheColorHint="#ccc"/>
 
     </LinearLayout>

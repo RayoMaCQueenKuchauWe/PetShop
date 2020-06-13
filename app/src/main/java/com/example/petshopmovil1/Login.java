@@ -47,6 +47,7 @@ Login extends AppCompatActivity {
                             Intent entra=new Intent(Login.this, MainActivity.class);
                             entra.putExtra("Id",ux.getId());
                             startActivity(entra);
+                            finish();
                         }
                         else
                         {
@@ -64,6 +65,7 @@ Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent cancel=new Intent(Login.this, Registrar.class);
                 startActivity(cancel);
+                finish();
             }
         });
 

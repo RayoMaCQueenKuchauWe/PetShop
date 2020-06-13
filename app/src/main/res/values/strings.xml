@@ -6,7 +6,7 @@
     <string name="btnQuienes">¿Quienes somos?</string>
     <string name="btnMenú">Cambiar idioma</string>
     <string name="btnListar">Listar Usuarios</string>
-    <string name="btnMascotas">Mascotas</string>
+    <string name="btnMascotas">Registrar mascota</string>
 
     <!-- FIN Activity_main-->
 
@@ -16,7 +16,7 @@
     <string name="lblGenero">Género:</string>
     <string name="lblNombre">Nombre:</string>
     <string name="lblRaza">Raza:</string>
-    <string name="lblEdad">Edad:</string>
+    <string name="lblEdad">Edad(meses):</string>
     <string name="seleccioneApp">Seleccione la aplicación</string>
     <string name="txtNombre">Nombre</string>
     <string name="txtRaza">Raza</string>
@@ -28,6 +28,10 @@
     <string name="btnAgregar">Agregar</string>
     <string name="btnRegistro">Registros</string>
     <string name="btnFoto">Agregar foto</string>
+
+    <string name="spinnerP">Perro</string>
+    <string name="spinnerG">Gato</string>
+    <string name="spinnerA">Ave</string>
     <!-- FIN Activity_main2-->
 
     <!--Errores-->
@@ -39,6 +43,7 @@
     <string name="error_falloRegistrar">Fallo al registrar</string>
     <string name="error_UsuarioYaRegistrado">Usuario ya registrado!</string>
     <string name="error_contraseñaCorta">Contraseña muy corta</string>
+    <string name="error_contraseñaCoincide">Las contraseñas no coinciden</string>
     <!--Fin Errores-->
     <!--Win-->
     <string name="win_registro_exitoso">Registro exitoso!</string>
@@ -89,6 +94,5 @@
 
     <string name="btnEspañol">Español</string>
     <string name="btnIngles">Ingles</string>
-    <string name="lblNombre">N</string>
     <!--Fin Activity Idioma-->
 </resources>
