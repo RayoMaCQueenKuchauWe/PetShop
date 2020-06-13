@@ -43,37 +43,6 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/somos" />
-
-                <Button
-                    android:id="@+id/btnSomos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    android:background="@drawable/btn_redondeado_registrar"
-                    android:fontFamily="serif"
-                    android:text="@string/btnQuienes"
-                    android:textSize="12sp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="30dp"
-                    android:textStyle="bold"
-                    android:elevation="5dp"
-                    android:textColor="#403f3f"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -101,20 +70,6 @@
                     android:elevation="5dp"
                     android:textColor="#403f3f"/>
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="horizontal"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -144,7 +99,19 @@
                     android:elevation="5dp"
                     android:textColor="#403f3f"/>
             </LinearLayout>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -166,6 +133,36 @@
                     android:background="@drawable/btn_redondeado_registrar"
                     android:fontFamily="serif"
                     android:text="@string/btnMenú"
+                    android:textSize="12sp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:textStyle="bold"
+                    android:elevation="5dp"
+                    android:textColor="#403f3f"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/somos" />
+
+                <Button
+                    android:id="@+id/btnSomos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/btn_redondeado_registrar"
+                    android:fontFamily="serif"
+                    android:text="@string/btnQuienes"
                     android:textSize="12sp"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"

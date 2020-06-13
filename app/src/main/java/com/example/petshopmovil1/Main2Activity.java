@@ -35,11 +35,6 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     Spinner tipo;
     String path;
 
-    private final String APP_DIRECTORY="MisImagenes/";
-    private final String MEDIA_DIRECTORY=APP_DIRECTORY+"fotos";
-
-    private final int PHOTO_CODE=20;
-    private final int SELECTOR_CODE=10;
 
     ImageView imageView;
 
@@ -50,28 +45,27 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        tipo=findViewById(R.id.edtTipo);
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(Main2Activity.this,R.array.TipoMascota,android.R.layout.simple_spinner_item);
+        tipo = findViewById(R.id.edtTipo);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(Main2Activity.this, R.array.TipoMascota, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tipo.setAdapter(adapter);
         tipo.setOnItemSelectedListener(this);
 
-        btnAgregar=findViewById(R.id.btnAgregar);
-        btnListar=findViewById(R.id.btnRegistro);
-        btnFoto=findViewById(R.id.btnFoto);
+        btnAgregar = findViewById(R.id.btnAgregar);
+        btnListar = findViewById(R.id.btnRegistro);
+        btnFoto = findViewById(R.id.btnFoto);
 
         raza = findViewById(R.id.txtRaza);
         edad = findViewById(R.id.txtEdad);
         nombre = findViewById(R.id.txtNombre);
 
-        imageView=findViewById(R.id.Foto);
+        imageView = findViewById(R.id.Foto);
 
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    if(validar())
-                    {
+                    if (validar()) {
                         Modelo mdl = new Modelo();
 
                         dto.setNombre(nombre.getText().toString());
@@ -80,13 +74,12 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
                         int resInsert = mdl.insetPet(Main2Activity.this, dto);
                         if (resInsert == 1) {
-                            Toast.makeText(Main2Activity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Main2Activity.this, getString(R.string.win_registro_exitoso), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(Main2Activity.this, "Fallo al registrar", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Main2Activity.this, getString(R.string.error_falloRegistrar), Toast.LENGTH_SHORT).show();
                         }
                     }
-                }catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     Toast.makeText(Main2Activity.this, ex.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
@@ -94,28 +87,9 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         btnFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                final CharSequence[] options={"Tomar foto", "Elegir de galeria", "Cancelar"};
-                final AlertDialog.Builder builder=new AlertDialog.Builder(Main2Activity.this);
-                builder.setTitle("Elige una opción");
-                builder.setItems(options, new DialogInterface.OnClickListener() {
-                    @SuppressLint("IntentReset")
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (options[which].equals("Tomar foto")) {
-                            openCamera();
-                        } else {
-                            if (options[which].equals("Elegir de galeria")) {
-                                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                                intent.setType("image/");
-                                startActivityForResult(Intent.createChooser(intent, "Seleccione la Aplicación"), SELECTOR_CODE);
-                            } else {
-                                dialog.dismiss();
-                            }
-                        }
-                    }
-                });
-                builder.show();
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setType("image/");
+                startActivityForResult(Intent.createChooser(intent, getString(R.string.seleccioneApp)), 10);
             }
         });
     }
@@ -182,48 +156,14 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         Intent intent=new Intent(this,lista_registro.class);
         startActivity(intent);
     }
-
-    private void openCamera(){
-        File file=new File(Environment.getExternalStorageDirectory(), MEDIA_DIRECTORY);
-        boolean isCreada=file.exists();
-        String nombre="";
-        if(!isCreada){
-            isCreada=file.mkdirs();
-        }
-        if(isCreada){
-            nombre=(System.currentTimeMillis()/1000)+".jpg";
-        }
-
-        path=Environment.getExternalStorageDirectory()+ File.separator + MEDIA_DIRECTORY + File.separator + nombre;
-        File newFile=new File(path);
-
-        Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(newFile));
-        startActivityForResult(intent, PHOTO_CODE);
-    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case PHOTO_CODE:
-                    MediaScannerConnection.scanFile(this, new String[]{path}, null, new MediaScannerConnection.OnScanCompletedListener() {
-                        @Override
-                        public void onScanCompleted(String path, Uri uri) {
-                            Log.i("Ruta de almacenamiento", "Path: " + path);
-                        }
-                    });
-                    Bitmap bitmap;
-                    bitmap = BitmapFactory.decodeFile(path);
-                    imageView.setImageBitmap(bitmap);
-                    dto.setFoto(bitmap.toString());
-                    break;
-                case SELECTOR_CODE:
-                    Uri path = data.getData();
-                    imageView.setImageURI(path);
-                    dto.setFoto(path.toString());
-                    break;
-            }
+
+            Uri path = data.getData();
+            imageView.setImageURI(path);
+            dto.setFoto(path.toString());
         }
     }
 }

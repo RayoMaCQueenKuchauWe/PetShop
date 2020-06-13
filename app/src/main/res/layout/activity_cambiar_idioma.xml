@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".cambiar_idioma">
 
     <ImageView
         android:layout_width="match_parent"
@@ -18,57 +18,24 @@
         android:gravity="center"
         android:layout_height="match_parent">
 
-
-        <ImageView
-            android:layout_width="110dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="110dp"
-            android:layout_marginBottom="70dp"
-            android:padding="10dp"
-            android:src="@drawable/login"
-            android:scaleType="centerCrop"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/User"
-            android:hint="@string/txtUsuario"
-            android:inputType="textPersonName"
             android:fontFamily="serif"
-            android:background="@drawable/input"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="@string/lblCambiarIdiomo"
+            android:textSize="34sp"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:textColor="#fff"
-            android:textColorHint="#ccc"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Pass"
-            android:hint="@string/txtPassword"
-            android:fontFamily="serif"
-            android:inputType="textPassword"
-            android:background="@drawable/input"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:textColor="#fff"
-            android:textColorHint="#ccc"/>
+            android:textColor="#ccc"/>
 
         <Button
-            android:id="@+id/btnEntrar"
+            android:id="@+id/btnEspañol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_redondeado_white"
-            android:text="@string/btnIncio"
+            android:background="@drawable/btn_redondeado_azul"
+            android:text="@string/btnEspañol"
             android:textColor="#403f3f"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -78,12 +45,12 @@
             android:fontFamily="serif"/>
 
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnIngles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_redondeado_registrar"
             android:fontFamily="serif"
-            android:text="@string/btnRegistrar"
+            android:text="@string/btnIngles"
             android:textColor="#403f3f"
             android:textSize="16sp"
             android:textStyle="bold"

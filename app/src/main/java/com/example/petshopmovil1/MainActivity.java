@@ -49,11 +49,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Algo más alla
+        //cambiarIdioma
         btnConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent most= new Intent(MainActivity.this, cambiar_idioma.class);
+                startActivity(most);
             }
         });
     }

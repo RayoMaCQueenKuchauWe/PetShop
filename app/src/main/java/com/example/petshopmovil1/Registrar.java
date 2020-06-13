@@ -36,7 +36,7 @@ public class Registrar extends AppCompatActivity {
                 try {
                     if(us.getText().toString().isEmpty() || pas.getText().toString().isEmpty() || pas2.getText().toString().isEmpty() || nom.getText().toString().isEmpty() || ap.getText().toString().isEmpty() || co.getText().toString().isEmpty())
                     {
-                        Toast.makeText(Registrar.this,"ERROR: Campos vacios",Toast.LENGTH_LONG).show();
+                        Toast.makeText(Registrar.this,getString(R.string.error_camposV),Toast.LENGTH_LONG).show();
                     }
                     else
                     {
@@ -48,18 +48,18 @@ public class Registrar extends AppCompatActivity {
                         u.setApellidos(ap.getText().toString());
                         u.setCorreo(co.toString());
                         if(!u.isNull()){
-                            Toast.makeText(Registrar.this,"ERROR: Campos vacios",Toast.LENGTH_LONG).show();
+                            Toast.makeText(Registrar.this,getString(R.string.error_camposV),Toast.LENGTH_LONG).show();
                         }
                         else
                         {
                             if(dao.insertUsuario(u)){
-                                Toast.makeText(Registrar.this,"Registro Exitoso!",Toast.LENGTH_LONG).show();
+                                Toast.makeText(Registrar.this,getString(R.string.win_registro_exitoso),Toast.LENGTH_LONG).show();
                                 Intent ent = new Intent (Registrar.this, Login.class);
                                 startActivity(ent);
                             }
                             else
                             {
-                                Toast.makeText(Registrar.this,"Usuario ya registrado",Toast.LENGTH_LONG).show();
+                                Toast.makeText(Registrar.this,getString(R.string.error_UsuarioYaRegistrado),Toast.LENGTH_LONG).show();
                             }
                         }
                     }
