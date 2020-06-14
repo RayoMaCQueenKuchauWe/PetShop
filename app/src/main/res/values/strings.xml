@@ -7,7 +7,7 @@
     <string name="btnMenú">Cambiar idioma</string>
     <string name="btnListar">Listar Usuarios</string>
     <string name="btnMascotas">Registrar mascota</string>
-
+    <string name="btn_salir">Salir</string>
     <!-- FIN Activity_main-->
 
     <!-- Activity_main2-->
@@ -44,6 +44,7 @@
     <string name="error_UsuarioYaRegistrado">Usuario ya registrado!</string>
     <string name="error_contraseñaCorta">Contraseña muy corta</string>
     <string name="error_contraseñaCoincide">Las contraseñas no coinciden</string>
+    <string name="error_email">Direccion email no valido</string>
     <!--Fin Errores-->
     <!--Win-->
     <string name="win_registro_exitoso">Registro exitoso!</string>

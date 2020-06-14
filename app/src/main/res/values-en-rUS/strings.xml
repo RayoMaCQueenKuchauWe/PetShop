@@ -4,6 +4,7 @@
     <string name="btnMenú">Change language</string>
     <string name="btnListar">List users</string>
     <string name="btnMascotas">Register pet</string>
+    <string name="btn_salir">Exit</string>
     <string name="lblRegistroM">Pet registry</string>
     <string name="lblTipo">Pet:</string>
     <string name="lblGenero">Gender:</string>
@@ -29,6 +30,7 @@
     <string name="error_UsuarioYaRegistrado">Registered user</string>
     <string name="error_contraseñaCorta">Very short password</string>
     <string name="error_contraseñaCoincide">Passwords do not match</string>
+    <string name="error_email">Email address not valid</string>
     <string name="win_registro_exitoso">Successful registration</string>
     <string name="txtUsuario">User</string>
     <string name="txtPassword">Password</string>

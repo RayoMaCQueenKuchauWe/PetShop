@@ -104,7 +104,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="55dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:orientation="horizontal"
@@ -172,5 +172,13 @@
                     android:textColor="#403f3f"/>
             </LinearLayout>
         </LinearLayout>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:id="@+id/btnSalir"
+            android:text="@string/btn_salir"
+            android:background="@drawable/btn_redondeado_rojo"
+            android:textColor="#fff"/>
     </LinearLayout>
 </RelativeLayout>
