@@ -35,10 +35,10 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     Spinner tipo;
     String path;
 
-
     ImageView imageView;
 
     PetsDTO dto=new PetsDTO();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +77,13 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                         int resInsert = mdl.insetPet(Main2Activity.this, dto);
                         if (resInsert == 1) {
                             Toast.makeText(Main2Activity.this, getString(R.string.win_registro_exitoso), Toast.LENGTH_SHORT).show();
+                            nombre.setText("");
+                            edad.setText("");
+                            raza.setText("");
+                            tipo.setSelection(0);
+
+                            imageView.setImageResource(R.mipmap.ic_launcher);
+
                         } else {
                             Toast.makeText(Main2Activity.this, getString(R.string.error_falloRegistrar), Toast.LENGTH_SHORT).show();
                         }
@@ -134,12 +141,12 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         switch (view.getId()) {
             case R.id.radioM:
                 if (marcado) {
-                    dto.setGenero("Macho");
+                    dto.setGenero(getString(R.string.radioM));
                 }
                 break;
             case R.id.radioH:
                 if (marcado) {
-                    dto.setGenero("Hembra");
+                    dto.setGenero(getString(R.string.radioH));
                 }
                 break;
         }
